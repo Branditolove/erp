@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Modal } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome6';
-import commonStyles from '../../estilos/estilo';
 
 const ProspectosInfo = ({ navigation }) => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -26,11 +25,11 @@ const ProspectosInfo = ({ navigation }) => {
   ];
 
   return (
-    <View style={commonStyles.container}>
+    <View style={styles.container}>
       <View style={styles.header}>
-        <Icon name="users-line" style={{ ...commonStyles.icon, fontSize: 40 }} />
+        <Icon name="users-line" style={{ ...styles.icon, fontSize: 40 }} />
       </View>
-      <View style={commonStyles.fullWidthCard}></View>
+      <View style={styles.fullWidthCard}></View>
       {/* White Card */}
       <View style={styles.card}>
         <TouchableOpacity style={styles.leftButton} onPress={toggleDropdown}>
@@ -75,21 +74,21 @@ const ProspectosInfo = ({ navigation }) => {
       {/* Informacion del Prospecto */}
       <View style={styles.card2}>
         <View style={styles.prospectInfo}>
-          <Text style={commonStyles.title}>Berel Pinturas</Text>
-          <Text style={commonStyles.titulomorado}>Nombre:</Text>
-          <Text style={commonStyles.titulomorado}>Rol:</Text>
-          <Text style={commonStyles.titulomorado}>Telefono:</Text>
-          <Text style={commonStyles.titulomorado}>Codigo:</Text>
-          <Text style={commonStyles.titulomorado}>De:</Text>
-          <Text style={commonStyles.titulomorado}>Hasta:</Text>
+          <Text style={styles.title}>Berel Pinturas</Text>
+          <Text style={styles.titulomorado}>Nombre:</Text>
+          <Text style={styles.titulomorado}>Rol:</Text>
+          <Text style={styles.titulomorado}>Telefono:</Text>
+          <Text style={styles.titulomorado}>Codigo:</Text>
+          <Text style={styles.titulomorado}>De:</Text>
+          <Text style={styles.titulomorado}>Hasta:</Text>
         </View>
         <View style={styles.prospectValues}>
-          <Text style={commonStyles.info}>Ricardo Herrera</Text>
-          <Text style={commonStyles.info}>Encargado</Text>
-          <Text style={commonStyles.info}>618-107-95-78</Text>
-          <Text style={commonStyles.info}>123FA7ERJ</Text>
-          <Text style={commonStyles.info}>01/10/2023</Text>
-          <Text style={commonStyles.info}>01/10/2023</Text>
+          <Text style={styles.info}>Ricardo Herrera</Text>
+          <Text style={styles.info}>Encargado</Text>
+          <Text style={styles.info}>618-107-95-78</Text>
+          <Text style={styles.info}>123FA7ERJ</Text>
+          <Text style={styles.info}>01/10/2023</Text>
+          <Text style={styles.info}>01/10/2023</Text>
         </View>
       </View>
     </View>
@@ -174,6 +173,73 @@ const styles = StyleSheet.create({
   dropdownOptionText: {
     fontSize: 16,
     color: '#333',
+  },
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    backgroundColor: '#4D69B4',
+  },
+
+  icon: {
+    color: '#7371FC',
+  },
+  card: {
+    backgroundColor: '#fff',
+    borderRadius: 20,
+    margin: 15,
+    padding: 15,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  title: {
+    fontSize: 20,
+    fontFamily: 'Poppins_600SemiBold',
+    color: '#2E3548',
+  },
+  info: {
+    fontSize: 14,
+    color: '#2E3548',
+    fontFamily: 'Poppins_400Regular'
+  },
+  titulomorado: {
+    fontSize: 14,
+    color: '#7371FC',
+    fontFamily: 'Poppins_400Regular',
+    fontWeight: '500'
+  },
+  headerRight: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  filterButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginRight: 15,
+  },
+  filterIcon: {
+    marginRight: 5,
+    color: '#2E3548',
+  },
+  filterText: {
+    color: '#2E3548',
+  },
+  searchInput: {
+    borderWidth: 1,
+    borderColor: '#BFBFBF',
+    borderRadius: 10,
+    paddingVertical: 8,
+    paddingHorizontal: 15,
+      backgroundColor: '#FCFDFF',
+  },
+  fullWidthCard: {
+    backgroundColor: '#E8EBF3',
+    height: '130%',
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    borderRadius: 25,
+    zIndex: -1,
   },
 });
 

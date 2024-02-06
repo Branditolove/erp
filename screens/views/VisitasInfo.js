@@ -92,6 +92,16 @@ const VisitasInfo = ({ navigation }) => {
           <Text style={styles.info}>01/10/2023</Text>
         </View>
       </View>
+
+      <View style={styles.card}>
+            <TouchableOpacity style={styles.leftButton} onPress={''}>
+            <View style={styles.buttonContainer}>
+                <Text style={styles.buttonText}>Finalizar Visita</Text>
+            </View>
+            </TouchableOpacity>
+
+        </View>
+
     </View>
   );
 };

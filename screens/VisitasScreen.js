@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, TextInput, ScrollView, StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome6';
-import commonStyles from '../estilos/estilo';
 import { useNavigation } from '@react-navigation/native';
 
 const VisitasScreen = () => {
@@ -21,16 +20,16 @@ const VisitasScreen = () => {
   };
 
   return (
-    <View style={commonStyles.container}>
-      <View style={commonStyles.header}>
+    <View style={styles.container}>
+      <View style={styles.header}>
         <TextInput
-          style={commonStyles.searchInput}
+          style={styles.searchInput}
           placeholder="Buscar..."
           placeholderTextColor="#2E3548"/>
 
-        <Icon name="person-running" style={{ ...commonStyles.icon, fontSize: 40 }} />
+        <Icon name="person-running" style={{ ...styles.icon, fontSize: 40 }} />
       </View>
-      <View style={commonStyles.fullWidthCard}></View>
+      <View style={styles.fullWidthCard}></View>
       <ScrollView>
         {prospectsData.map(prospect => (
           <TouchableOpacity
@@ -40,11 +39,10 @@ const VisitasScreen = () => {
           >
             {/* Prospect Information */}
             <View style={styles.prospectInfo}>
-              <Text style={commonStyles.title}>{prospect.compania}</Text>
-              <Text style={commonStyles.info}>{prospect.name}</Text>
-              <Text style={commonStyles.info}>{prospect.role}</Text>
+              <Text style={styles.title}>{prospect.compania}</Text>
+              <Text style={styles.info}>{prospect.name}</Text>
+              <Text style={styles.info}>{prospect.role}</Text>
             </View>
-
             <TouchableOpacity style={styles.redIconContainer}>
               <Icon name="times" style={styles.redIcon} />
             </TouchableOpacity>
@@ -90,6 +88,79 @@ const styles = StyleSheet.create({
   redIcon: {
     color: '#fff',
     fontSize: 10,
+  },
+
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    backgroundColor: '#4D69B4',
+  },
+  header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: 15
+  },
+  icon: {
+    color: '#7371FC',
+  },
+  card: {
+    backgroundColor: '#fff',
+    borderRadius: 20,
+    margin: 15,
+    padding: 15,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  title: {
+    fontSize: 20,
+    fontFamily: 'Poppins_600SemiBold',
+    color: '#2E3548',
+  },
+  info: {
+    fontSize: 14,
+    color: '#2E3548',
+    fontFamily: 'Poppins_400Regular'
+  },
+  titulomorado: {
+    fontSize: 14,
+    color: '#7371FC',
+    fontFamily: 'Poppins_400Regular',
+    fontWeight: '500'
+  },
+  headerRight: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  filterButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginRight: 15,
+  },
+  filterIcon: {
+    marginRight: 5,
+    color: '#2E3548',
+  },
+  filterText: {
+    color: '#2E3548',
+  },
+  searchInput: {
+    borderWidth: 1,
+    borderColor: '#BFBFBF',
+    borderRadius: 10,
+    paddingVertical: 8,
+    paddingHorizontal: 15,
+      backgroundColor: '#FCFDFF',
+  },
+  fullWidthCard: {
+    backgroundColor: '#E8EBF3',
+    height: '130%',
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    borderRadius: 25,
+    zIndex: -1,
   },
 });
 
