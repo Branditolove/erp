@@ -1,34 +1,26 @@
+// ProfileCardComponent.js
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
-const ProfileScreen = ({ route }) => {
-  const user = route.params?.user || {};
-
+const CardUser = ({ user }) => {
   return (
-    <View style={styles.container}>
+
       <View style={styles.card}>
         <Ionicons name="person-circle-outline" size={80} color="#4D69B4" style={styles.icon} />
         <View style={styles.contentContainer}>
-          <Text style={styles.header}>{user.fullName}</Text>
-          <Text style={styles.text}>{user.email}</Text>
-          <Text style={styles.text}>{user.puesto}</Text>
+          <Text style={styles.header}>Hola</Text>
+          <Text style={styles.text}>TEST</Text>
+          <Text style={styles.text}>TEST</Text>
         </View>
       </View>
-    </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-    backgroundColor: '#4D69B4',
-    padding:10
-  },
+
   card: {
-    flexDirection: 'row', 
+    flexDirection: 'row',
     backgroundColor: '#FFFFFF',
     borderRadius: 15,
     padding: 15,
@@ -38,7 +30,7 @@ const styles = StyleSheet.create({
   icon: {
     marginStart: -18,
     marginTop: -60,
-    marginRight:5, 
+    marginRight: 5,
   },
   contentContainer: {
     flex: 1,
@@ -55,4 +47,5 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ProfileScreen;
+export default CardUser;
+

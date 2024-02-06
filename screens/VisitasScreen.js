@@ -4,20 +4,20 @@ import Icon from 'react-native-vector-icons/FontAwesome6';
 import commonStyles from '../estilos/estilo';
 import { useNavigation } from '@react-navigation/native';
 
-const ProspectosScreen = () => {
+const VisitasScreen = () => {
   const navigation = useNavigation();
 
   const prospectsData = [
-    { id: 1, compania: 'Berel Pinturas', name: 'Ricardo Herrera', role: 'Encargado', phoneNumber: '618-107-95-78' },
-    { id: 2, compania: 'DISTRIBUIDORA DE LLANTAS CAPITAL', name: 'Ricardo Herrera', role: 'Encargado', phoneNumber: '618-107-95-78' },
-    { id: 3, compania: 'DISTRIBUIDORA DE LLANTAS CAPITAL', name: 'Ricardo Herrera', role: 'Encargado', phoneNumber: '618-107-95-78' },
-    { id: 4, compania: 'DISTRIBUIDORA DE LLANTAS CAPITAL', name: 'Ricardo Herrera', role: 'Encargado', phoneNumber: '618-107-95-78' },
-    { id: 5, compania: 'DISTRIBUIDORA DE LLANTAS CAPITAL', name: 'Ricardo Herrera', role: 'Encargado', phoneNumber: '618-107-95-78' },
-    { id: 6, compania: 'DISTRIBUIDORA DE LLANTAS CAPITAL', name: 'Ricardo Herrera', role: 'Encargado', phoneNumber: '618-107-95-78' },
+    { id: 1, compania: 'Ricardo Angel Fournier', name: 'Ricardo Herrera', role: 'Encargado', fecha: '25/01/2024' },
+    { id: 2, compania: 'DISTRIBUIDORA DE LLANTAS CAPITAL', name: 'Ricardo Herrera', role: 'Encargado', fecha: '25/01/2024' },
+    { id: 3, compania: 'DISTRIBUIDORA DE LLANTAS CAPITAL', name: 'Ricardo Herrera', role: 'Encargado', fecha: '25/01/2024' },
+    { id: 4, compania: 'DISTRIBUIDORA DE LLANTAS CAPITAL', name: 'Ricardo Herrera', role: 'Encargado', fecha: '25/01/2024' },
+    { id: 5, compania: 'DISTRIBUIDORA DE LLANTAS CAPITAL', name: 'Ricardo Herrera', role: 'Encargado', fecha: '25/01/2024' },
+    { id: 6, compania: 'DISTRIBUIDORA DE LLANTAS CAPITAL', name: 'Ricardo Herrera', role: 'Encargado', fecha: '25/01/2024' },
   ];
 
   const handleCardPress = (prospect) => {
-    navigation.navigate('ProspectosInfo', { prospect });
+    navigation.navigate('VisitasInfo', { prospect });
   };
 
   return (
@@ -28,7 +28,7 @@ const ProspectosScreen = () => {
           placeholder="Buscar..."
           placeholderTextColor="#2E3548"/>
 
-        <Icon name="users-line" style={{ ...commonStyles.icon, fontSize: 40 }} />
+        <Icon name="person-running" style={{ ...commonStyles.icon, fontSize: 40 }} />
       </View>
       <View style={commonStyles.fullWidthCard}></View>
       <ScrollView>
@@ -49,7 +49,7 @@ const ProspectosScreen = () => {
               <Icon name="times" style={styles.redIcon} />
             </TouchableOpacity>
 
-            <Text style={styles.phoneNumber}>{prospect.phoneNumber}</Text>
+            <Text style={styles.fecha}>{prospect.fecha}</Text>
           </TouchableOpacity>
         ))}
       </ScrollView>
@@ -71,9 +71,10 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'flex-start',
   },
-  phoneNumber: {
+  fecha: {
     fontSize: 14,
     color: '#2E3548',
+    fontWeight: '600',
     position: 'absolute',
     bottom: 10,
     right: 15,
@@ -92,4 +93,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ProspectosScreen;
+export default VisitasScreen;
