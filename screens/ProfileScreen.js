@@ -4,6 +4,7 @@ import { View, StyleSheet } from 'react-native';
 import ProfileComponent from '../components/profileComponent'; // Assuming both files are in the same directory
 import CardUser from '../components/cardUser'; // Assuming both files are in the same directory
 import Icon from 'react-native-vector-icons/FontAwesome6';
+import CollapsibleCard from '../components/cardPeriod';
 
 const ProfileScreen = ({ route }) => {
   const user = route.params?.user || {};
@@ -44,13 +45,13 @@ const ProfileScreen = ({ route }) => {
     { name: 'Produccion' }
   ];
 
-
   const iconColor = '#7371FC';
 
   return (
     <View style={styles.container}>
       <View style={fullWidthCard}></View>
           <CardUser/>
+          <CollapsibleCard/>
           <ProfileComponent
         titulo={titulo}
         iconColor={iconColor}
@@ -58,8 +59,8 @@ const ProfileScreen = ({ route }) => {
         row1={row1}
         row2={row2}
       />
-    </View>
 
+    </View>
 
   );
 };

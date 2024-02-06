@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Modal } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome6';
 
-const VisitasInfo = ({ navigation }) => {
+const ClientesInfo = ({ navigation }) => {
   const [showDropdown, setShowDropdown] = useState(false);
 
   const toggleDropdown = () => {
@@ -28,7 +28,7 @@ const VisitasInfo = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Icon name="person-running" style={{ ...styles.icon, fontSize: 40 }} />
+        <Icon name="users" style={{ ...styles.icon, fontSize: 40 }} />
       </View>
       <View style={styles.fullWidthCard}></View>
       {/* White Card */}
@@ -96,7 +96,7 @@ const VisitasInfo = ({ navigation }) => {
       <View style={styles.card}>
             <TouchableOpacity style={styles.leftButton} onPress={''}>
             <View style={styles.buttonContainer}>
-                <Text style={styles.buttonText}>Finalizar Visita</Text>
+                <Text style={styles.buttonText}>Agregar Visita</Text>
             </View>
             </TouchableOpacity>
 
@@ -255,4 +255,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default VisitasInfo;
+export default ClientesInfo;

@@ -7,6 +7,8 @@ import ProspectosInfo from '../screens/views/ProspectosInfo'
 import CollapsibleCard from '../components/cardPeriod';
 import VisitasScreen from '../screens/VisitasScreen';
 import VisitasInfo from '../screens/views/VisitasInfo';
+import ClientesScreen from '../screens/ClientesScreen';
+import ClientesInfo from '../screens/views/ClientesInfo';
 
 const Stack = createStackNavigator();
 
@@ -28,6 +30,8 @@ export const AppNavigator = () => (
       <Stack.Screen name="ProspectosInfo" component={ProspectosInfo} />
       <Stack.Screen name="Visitas" component={VisitasScreen} />
       <Stack.Screen name="VisitasInfo" component={VisitasInfo} />
+      <Stack.Screen name="Clientes" component={ClientesScreen} />
+      <Stack.Screen name="ClientesInfo" component={ClientesInfo} />
     </Stack.Navigator>
 
 );

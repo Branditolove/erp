@@ -62,7 +62,7 @@ const ProfileComponent = ({ titulo, iconColor, fullWidthCard, row1, row2 }) => {
         </TouchableOpacity>
 
         <TouchableOpacity
-          onPress={() => navigation.navigate(row2[1].screen)}
+          onPress={() => navigation.navigate('Clientes')}
           style={{
             width: 80,
             height: 80,

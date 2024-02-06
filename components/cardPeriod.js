@@ -36,7 +36,7 @@ const CollapsibleCard = ({ route }) => {
   }
 
   if (error) {
-    return <Text>{error}</Text>;
+    return <Text>error</Text>;
   }
 
   return (
