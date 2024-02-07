@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     alignItems: 'center',
     padding: 8,
-    backgroundColor: '#4D69B4', // Set your desired button color
+    backgroundColor: '#4D69B4',
   },
   buttonText: {
     marginLeft: 5,

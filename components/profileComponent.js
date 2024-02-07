@@ -11,7 +11,7 @@ const ProfileComponent = ({ titulo, iconColor, fullWidthCard, row1, row2 }) => {
       {/* Full-width card */}
 
 
-      {/* Existing rows */}
+      {/*VISITAS */}
       <View style={{ flexDirection: 'row', alignSelf: 'center' }}>
         <TouchableOpacity
           onPress={() => navigation.navigate('Visitas')}
@@ -29,6 +29,8 @@ const ProfileComponent = ({ titulo, iconColor, fullWidthCard, row1, row2 }) => {
           <Text style={{ marginTop: 5, textAlign: 'center', color: '#2E3548', fontSize: 10 }}>Visitas</Text>
         </TouchableOpacity>
 
+      {/*pROSPECTOS */}
+
         <TouchableOpacity
           onPress={() => navigation.navigate('Prospectos')}
           style={{
@@ -45,8 +47,10 @@ const ProfileComponent = ({ titulo, iconColor, fullWidthCard, row1, row2 }) => {
           <Text style={{ marginTop: 5, textAlign: 'center', color: '#2E3548', fontSize: 10 }}>Prospectos</Text>
         </TouchableOpacity>
 
+      {/*CONTRATOS */}
+
         <TouchableOpacity
-          onPress={() => navigation.navigate(row2[0].screen)}
+          onPress={() => navigation.navigate('Contratos')}
           style={{
             width: 80,
             height: 80,

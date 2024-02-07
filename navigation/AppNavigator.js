@@ -9,11 +9,11 @@ import VisitasScreen from '../screens/VisitasScreen';
 import VisitasInfo from '../screens/views/VisitasInfo';
 import ClientesScreen from '../screens/ClientesScreen';
 import ClientesInfo from '../screens/views/ClientesInfo';
+import ContratosScreen from '../screens/ContratosScreen';
 
 const Stack = createStackNavigator();
-
 export const AppNavigator = () => (
-  <Stack.Navigator initialRouteName="Profile"  screenOptions={{
+  <Stack.Navigator initialRouteName="Login"  screenOptions={{
     headerStyle: {
       backgroundColor: '#4D69B4',
     },
@@ -32,6 +32,8 @@ export const AppNavigator = () => (
       <Stack.Screen name="VisitasInfo" component={VisitasInfo} />
       <Stack.Screen name="Clientes" component={ClientesScreen} />
       <Stack.Screen name="ClientesInfo" component={ClientesInfo} />
+      <Stack.Screen name="Contratos" component={ContratosScreen} />
+
     </Stack.Navigator>
 
 );
